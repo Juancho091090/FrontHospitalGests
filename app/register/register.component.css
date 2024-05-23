@@ -1,0 +1,33 @@
+/* Estilos para el contenedor principal */
+.fondo {
+    background-image: url("../../assets/Fondo\ de\ pantalla\ cielo\ azul.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+.marginForm{
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+/* Estilos comunes para los formularios */
+.bord{    
+    display: block;
+    justify-content: center;
+    border: rgb(136, 133, 133) 5px solid;
+    border-radius: 25px;
+    background-color: rgb(245, 245, 220, 0.5);
+}
+.botones{
+    text-align: center;
+}
+.btn{
+    margin-right: 20px;
+    text-align: center;
+}
+.mb-3, input, form{
+    text-align: center;
+    width: auto;
+}

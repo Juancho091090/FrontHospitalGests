@@ -1,0 +1,62 @@
+<body>
+  <div class="container-fluid fondo">
+  <div class="bord" style="width: 500px; margin-top: 5%; margin-bottom: 5%;">
+      <form [formGroup]="formularioR" (ngSubmit)="onSubmit()" class="marginForm border-success">
+        <div class="mb-3 ">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-control" style="width: 100%" required="true" formControlName="firstName"  />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Second name</label>
+          <input type="text" class="form-control" style="width: 100%;" formControlName="secondName" />
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">First Lastname</label>
+          <input type="text" class="form-control" style="width: 100%;" required="true" formControlName="firstLastName" />
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">Second Lastname</label>
+          <input type="text" class="form-control" style="width: 100%;" formControlName="secondLastName" />
+        </div>
+        <div class="mb-3 ">
+          <label for="opciones">Document Type</label>
+          <select class="form-control" name="opciones" formControlName="documentType" style="text-align: center;">
+            <option value="">Select...</option>
+            <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+            <option value="Cedula de extranjeria">Cedula de extranjeria</option>
+            <option value="Trajeta de identidad">Trajeta de identidad</option>
+            <option value="Registro civil">Registro civil</option>
+          </select>
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">Identification number</label>
+          <input type="text" class="form-control" style="width: 100%;" required="true" formControlName="document" />
+        </div>
+        <div class="mb-3 ">
+          <label class="form-label">Role</label>
+          <select class="form-control" name="opciones" required="true" formControlName="role" style="text-align: center;">
+            <option value="">Select...</option>
+            <option value="Paciente">Paciente</option>
+            <option value="Doctor(a)">Doctor(a)</option>
+            <option value="Enfremero(a)">Enfremero(a)</option>
+            <option value="Administrativo">Administrativo</option>
+            <option value="Operativo">Operativo</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" style="width: 100%;" required="true" formControlName="password" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password Repeat</label>
+          <input type="password" class="form-control" style="width: 100%;" required="true" formControlName="passwordRepeat" />
+        </div>
+        <div class="botones">
+          <input type="submit" value="Register" class="btn btn-secondary">
+          <input type="submit" value="Back" class="btn btn-secondary" (click)="Back()">
+        </div>    
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">ERROR: Both passwords must be the same</div>      
+      </form>
+    </div>
+  </div>
+</body>

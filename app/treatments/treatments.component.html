@@ -1,0 +1,92 @@
+<body>
+  <header>
+      <div class="logo">
+          <img src="../../assets/Banner 1 hospital G.png" alt="Logo del hospital" width=100%; height=100px; style="box-shadow: 2px 2px 5px #57647efb; margin-top: 0%;">
+      </div>
+      <nav class="botones">
+          <ul>
+              <li><button type="button" class="btn btn-outline-secondary" (click)="mr()">Medical Records</button></li>
+              <!-- <li><button type="button" class="btn btn-outline-secondary" (click)="diag()">Diagnosis</button></li> -->
+              <li><button type="button" class="btn btn-success ">Treatments</button></li>
+              <li><button type="button" class="btn btn-outline-secondary" (click)="medicine()">Medicine</button></li>
+              <li><button type="button" class="btn btn-outline-secondary" (click)="mn()">Medical Notes</button></li>
+              <li><button type="button" class="btn btn-outline-secondary" (click)="mrs()">Medical Results</button></li>
+              <li><button type="button" class="btn btn-primary" (click)="ms()">Main Start</button></li>
+          </ul>
+      </nav>
+  </header>
+  <!-- boton que llama el listado de pacientes -->
+  <div class="col-md-4" style="width: 20%; display: flex;">
+    <button type="submit" class="btn btn-secondary" style="width: 100%" (click)="getPerson()">Show Patients</button>
+  </div>
+  <!-- Tabla donde se muestra la lista de pacientes -->
+  <div class="container-tabla">
+    <h2 style="text-align: center; margin-bottom: 0%"></h2>
+    <table class="table table-striped" style="border: black solid">
+        <thead>
+          <tr>
+            <th id="PersonID">Id Person</th>
+            <th id="FirstName">First Name</th>
+            <th id="SecondName">Second Name</th>
+            <th id="FirstLastName">First Lastname</th>
+            <th id="SecondLastName">Second Lastname</th>
+            <th id="DocumentType">Document type</th>
+            <th id="Document">Document</th>
+            <th id="Role">Role</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of Persons">
+            <td style="text-align: center">{{ item.personId }}</td>
+            <td style="text-align: center">{{ item.firstName }}</td>
+            <td style="text-align: center">{{ item.secondName }}</td>
+            <td style="text-align: center">{{ item.firstLastName }}</td>
+            <td style="text-align: center">{{ item.secondLastName }}</td>
+            <td style="text-align: center">{{ item.documentType }}</td>
+            <td style="text-align: center">{{ item.document }}</td>
+            <td style="text-align: center">{{ item.role }}</td>
+        </tr>
+        </tbody>
+    </table>
+  </div>
+  <!-- Formulario para registrar la Historia Clinica -->
+  <div class="row-formulario">
+    <form [formGroup]="FormularioT" (ngSubmit)="onSubmit()" class="formulario"> 
+      <label type="text" class="LabelTitulo"> REGISTER TREATMENT </label>
+      <input type="text" class="form-control" id="TreatmentId" placeholder="Id Treatment" formControlName="TreatmentId" />
+      <input type="text" class="form-control" id="TreatmentType" placeholder="Tratment Type" formControlName="TreatmentType" />
+      <label type="text" style="margin-top: 20px;">Start Date</label>
+      <input type="date" class="form-control" id="TreatmentStartDate" placeholder="Start Dare (YYYY-MM-DD)" formControlName="TreatmentStartDate" />
+      <label type="text" style="margin-top: 20px;">End Date</label>
+      <input type="date" class="form-control" id="TreatmentEndDate" placeholder="End Dare (YYYY-MM-DD)" formControlName="TreatmentEndDate" />
+      <input type="text" class="form-control" id="Dosage" placeholder="Dosage" formControlName="Dosage" />
+      <input type="text" class="form-control" id="MedicalRecordID" placeholder="Id Medical Record" formControlName="MedicalRecordID" />
+      <button type="submit" class="btn btn-success" id="Crear" (click)="accion = 'crear'"> Register </button>
+      <button type="submit" class="btn btn-warning" id="Actualizar" (click)="accion = 'actualizar'"> UpDate </button>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3"> ERROR: Por favor valide con el equipo de soporte {{ errorMessage }}
+      </div> <div class="alert alert-success mt-3" *ngIf="response">{{ response }} </div>
+    </form>
+  </div>
+  </body>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Support Contacto</h4>
+          <ul class="list-unstyled">
+            <li><i class="fa fa-phone"></i> Teléfono: +57 3217853214</li>
+            <li><i class="fa fa-envelope"></i> Correo electrónico:supporthospitalgest.com</li>
+            <li><i class="fa fa-map-marker"></i> Dirección: Carrera 3a # 25-10</li>
+          </ul>
+        </div>
+        <div class="col-md-4 " style="text-align: center;">
+          <h4>Hospital Gest</h4>
+          <p>Atendiendo cada necesidad con compasión y excelencia, porque tu salud es nuestra prioridad</p>
+        </div>
+        <div class="col-md-4 ">
+            <img src="../../assets/Logo HospitalGest.jpg" alt="logo" width="145px" style="float: right; margin: 2px;">
+        </div>
+      </div>
+    </div>
+  </footer>
+  

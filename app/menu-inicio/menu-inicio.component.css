@@ -1,0 +1,71 @@
+/*Cabecero*/
+.botones ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;  
+}
+.botones ul li {
+    display: inline;
+}
+.botones ul li:not(:last-child) {
+    margin-right: 5px;
+}
+/*Cuerpo de la pagina*/
+body {
+    background: linear-gradient(to bottom, #f7f8fafb, #1a1c358f);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: block;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+}
+/*Vision*/
+.vision{    
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    border: 2px solid #c5bebe;
+    color: black;    
+    display: flex;
+}
+.titulov, .titulom, .tituloo{
+    margin: auto;
+    margin-left: 1%;
+}
+.rel, .rel2, .rel3{
+    margin: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: medium;
+}
+/*Mision*/
+.mision{
+    justify-content: space-between;
+    margin: auto;
+    border: 2px solid #c5bebe;
+    color: black;   
+    display: flex;     
+    margin-bottom: 20px;
+}
+.objetivos{
+    justify-content: space-between;
+    margin: auto;
+    border: 2px solid #c5bebe;
+    color: black;   
+    display: flex; 
+    width: 100%;
+}
+.imagenMision, .imagenVision, .imagenObjetivos{
+    margin: 10px;
+}
+.footer{
+    background-color: #110b2d;
+    font-size: small;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

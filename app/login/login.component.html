@@ -1,0 +1,21 @@
+<div class="fondo">
+    <div class="container">
+      <div class="bord" >
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="marginForm">
+          <div class="mb-3">
+            <label class="form-label">Document:</label>
+            <input type="text" class="form-control " formControlName="document"  >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password:</label>
+            <input type="password" class="form-control" formControlName="password">
+          </div>
+          <div class="botones">            
+            <input type="submit" value="Login" class="btn btn-secondary">
+            <input type="submit" value="Register" class="btn btn-secondary" (click)="register()">
+          </div>     
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3">Invalid credentials. Please check your document and password.</div>     
+        </form>
+      </div>  
+    </div>
+  </div>

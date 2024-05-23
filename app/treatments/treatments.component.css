@@ -1,0 +1,96 @@
+/* Botones Principales*/
+.botones ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;  
+}
+.botones ul li {
+    display: inline;
+}
+.botones ul li:not(:last-child) {
+    margin-right: 5px;
+}
+
+/*Contenedor de botones body*/
+body button{
+    text-align: center;
+    float: right;
+    margin-right: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*Cuerpo de la pagina*/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #f7f8fafb, #1a1c358f);
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    height: 100cqm;
+}
+
+/*Contenedor del formulario de registro y actualización*/
+.formulario{    
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+/*Estilos de la tabla de registros*/
+#PersonID, #FirstName, #SecondName, #FirstLastName, #SecondLastName, #DocumentType, #Document, #Role{
+    position: -webkit-sticky; /* Para compatibilidad con Safari */
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+    color: beige;
+    background-color: black;
+    text-align: center;
+}
+
+/*Background del formulario*/
+.row-formulario{
+    border-radius: 30px ;
+    background-color: rgb(10, 10, 10, 0.5);
+    width: 40%;
+    display: flex;
+    Justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 10px;
+}
+
+/*Input´s de registro y actualización*/
+#TreatmentId, #TreatmentType, #TreatmentStartDate, #TreatmentEndDate, #Dosage, #MedicalRecordID{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 90%;   
+    text-align: center;
+}
+
+/*Botones de crear y actualizar*/
+#Crear, #Actualizar{
+    margin-top: 10px;
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/*footer*/
+.footer{
+    position: fixed; /* Fija el footer en la parte inferior */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #110b2d;
+    color:antiquewhite;
+    font-size: small;  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: auto;
+}
+

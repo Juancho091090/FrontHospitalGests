@@ -1,0 +1,44 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marginForm{
+    margin-top: 5%;    
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+.bord{
+    padding: 5px 10px;
+    border: rgb(136, 133, 133) 5px solid;
+    border-radius: 25px;
+    background-color: rgb(245, 245, 220, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+.fondo{
+    background-image: url("../../assets/Fondo\ de\ pantalla\ cielo\ azul.png");
+    background-repeat: no-repeat;
+    background-size:auto; 
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+.botones{    
+    text-align: center;  
+}
+.btn{
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+.mb-3{
+    font-size: large;
+    font-weight: bold;
+}
